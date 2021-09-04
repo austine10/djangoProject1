@@ -1,0 +1,36 @@
+.flex container{
+    background: chartreuse;
+    text-align: center;
+    font-family: "Fira Code", serif;
+    padding: 20px 10px;
+
+}
+.body{
+    text-align: center;
+    padding: 100px;
+    background-color: coral;
+}
+h1{
+    text-align: center;
+    color: chocolate;
+
+}
+.nav-sidebar{
+    text-align: center;
+    padding: 20px;
+    color: coral;
+}
+.text{
+    align-items: center;
+    alignment: center;
+    align-content: center;
+    color: chocolate;
+    padding: 30px;
+}
+ol{
+    padding: 30px;
+    width: 200px;
+    line-break: auto;
+    color: chartreuse;
+
+}

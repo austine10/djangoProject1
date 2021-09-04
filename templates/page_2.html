@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+
+
+    <head>
+        <meta charset="UTF-8">
+        <title>sites</title>
+    </head>
+    <div class="nav-fill" style="margin-bottom: 10px">
+        <nav class="navbar navbar-cyan bg-light" style="padding: 15px">
+        <a class="navbar-brand" href="#">TODO SITE</a>
+    </nav>
+
+    </div>
+<div class="row-mt4">
+     <div class="col" style="padding-inline: 20px">
+            <form class="d-flex" action="add" method="get">
+                    <input class=" mb-2 mr-sm-2" type="text" placeholder="Do what..." aria-label="text" name="subject">
+                <div class="float-right" style="padding: 30px">
+                    <button class="btn btn-outline-success" type="submit">Submit</button>
+                </div>
+
+
+            </form>
+    </div>
+</div>
+
+    <div class="row mt-4">
+      <div class="col">
+          <ul class="list-group" style="margin-bottom: 20px;margin-right: 20px;margin-left: 20px;margin-top: 20px;">
+
+           {% for subject in notes %}
+           <li class="list-group-item active" aria-current="true" style="padding: 20px;margin-top: 20px;margin-left: 20px;margin-right: 20px;margin-bottom: 20px">{{ subject }}
+             <div class="float-sm-end">
+                 <form action="delete/{{ subject.id }}">
+                    <button class="btn btn-primary" type="submit">Delete</button>
+                 </form>
+             </div>
+
+
+          </ul>
+    {% endfor %}
+       </div>
+
+    </div>
+
+
+{% endblock content %}
+
+
